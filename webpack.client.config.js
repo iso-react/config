@@ -10,7 +10,7 @@ module.exports = ({entry = 'src/entry/client.js', root = cwd} = {}) => ({
   entry: path.resolve(root, entry),
   output: {
     path: path.resolve(root, 'dist/static'),
-    file: 'client.[hash].js',
+    filename: 'client.[hash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
