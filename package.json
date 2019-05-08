@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/iso-react/config#readme",
   "dependencies": {
+    "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.4.4",
