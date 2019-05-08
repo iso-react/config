@@ -8,7 +8,7 @@ module.exports = ({entry = 'src/entry/server.js', root = cwd} = {}) => ({
   entry: path.resolve(root, entry),
   output: {
     path: path.resolve(root, 'dist'),
-    filename: 'server.bundle.js',
+    file: 'server.bundle.js',
   },
   target: 'node',
   node: {

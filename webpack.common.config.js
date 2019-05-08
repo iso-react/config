@@ -6,7 +6,7 @@ const common = ({root = cwd} = {}) => ({
   mode: 'development',
   output: {
     publicPath: '/static/',
-    filename: '[name].bundle.js',
+    file: '[name].bundle.js',
   },
   resolve: {
     alias: {
