@@ -4,7 +4,7 @@
   "description": "Shared configuration files for @iso-react projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Warning: no test specified\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -39,9 +39,16 @@
     "@semantic-release/github": "^5.2.10",
     "@semantic-release/npm": "^5.1.4",
     "@semantic-release/release-notes-generator": "^7.1.4",
+    "jest": "^24.8.0",
     "semantic-release": "^16.0.0-beta.18"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "jest": {
+    "rootDir": ".",
+    "moduleNameMapper": {
+      "^~(.*)$": "<rootDir>$1"
+    }
   }
 }
