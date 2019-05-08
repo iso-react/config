@@ -1,5 +1,4 @@
 const path = require('path');
-const common = require('./webpack.common.config.js');
 
 const cwd = process.cwd();
 

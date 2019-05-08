@@ -1,4 +1,5 @@
 const path = require('path');
+const common = require('./webpack.common.config.js');
 
 module.exports = ({entry = 'src/entry/client.js', root = cwd} = {}) => ({
   ...common(root),
