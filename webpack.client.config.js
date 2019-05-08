@@ -14,7 +14,7 @@ module.exports = ({entry = 'src/entry/client.js', root = cwd} = {}) => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(root, 'public/index.html'),
+      template: path.resolve(__dirname, 'index.html'),
       filename: path.resolve(root, 'dist/index.html'),
     }),
     new webpack.DefinePlugin({
