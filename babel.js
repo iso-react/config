@@ -1,7 +1,8 @@
 const isProduction = String(process.env.NODE_ENV) === 'production';
 const isTest = String(process.env.NODE_ENV) === 'test';
 
-module.exports = (_, opts = {}) => {
+module.exports = (api, opts = {}) => {
+  api.cache(() => process.env.NODE_ENV);
   if (!opts.env) opts.env = {};
   return {
     presets: [
