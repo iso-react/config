@@ -13,6 +13,7 @@ module.exports = (api, opts = {}) => {
       ],
     ],
     plugins: [
+      '@babel/transform-runtime',
       '@babel/plugin-proposal-class-properties',
       isTest ? 'babel-plugin-dynamic-import-node' : null,
     ].filter(Boolean),
