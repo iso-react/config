@@ -10,7 +10,7 @@ module.exports = ({entry = 'src/entry/client.js', root = cwd} = {}) => ({
   entry: path.resolve(root, entry),
   output: {
     path: path.resolve(root, 'dist/static'),
-    filename: 'client.[hash].js',
+    filename: '[name].[contenthash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -23,4 +23,16 @@ module.exports = ({entry = 'src/entry/client.js', root = cwd} = {}) => ({
       },
     }),
   ],
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
 });
