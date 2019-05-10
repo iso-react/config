@@ -13,6 +13,9 @@ const common = ({root = cwd} = {}) => ({
       '~': path.resolve(root, 'src'),
     },
   },
+  node: {
+    fs: 'empty',
+  },
   module: {
     rules: [
       {
